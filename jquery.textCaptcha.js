@@ -19,7 +19,8 @@
 		var defaults = {
 			type: 'text', // Type of characters to display for captcha. Can be text, number or random.
 			method: 'alphabetic', // Type of sort to require the user to perform. Can be alphabetic, reverse_alphabetic, backwards or random if  type=text. Can be add, multiply or random if type=math
-			length: 4 // Number of characters to display. I would suggest 4 to 6. Only applies if type=text.
+			length: 4, // Number of characters to display. I would suggest 4 to 6. Only applies if type=text.
+			target: null
 		};
   
 		var options = $.extend(defaults, options);
