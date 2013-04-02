@@ -164,7 +164,10 @@
 				output += '<input type="hidden" id="captcha_method_'+ identifier + '" name="captcha_method" value="'+options.method+'" />';
 				output += '<input type="hidden" id="captcha_value_'+ identifier + '" name="captcha_value" value="'+captcha_string+'" />';
 	
-				el.children(':submit').before(output);
+				if(options.target == null)
+					el.find(':submit').before(output);
+				else
+					$(options.target).append(output);
 			}
 			
 			function mismatch_error() {
